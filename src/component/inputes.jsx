@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 let newnote = JSON.parse(localStorage.getItem("notes")) || [];
-
 function Note() {
   // States
   const [title, settiyle] = useState("");
