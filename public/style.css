@@ -44,6 +44,15 @@ footer p {
   width: 240px;
   margin: 16px;
   float: left;
+  position: relative;
+}
+.note button {
+  font-size: 20px;
+  border: none;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
+  background-color: transparent;
 }
 .note h1 {
   font-size: 1.1rem;

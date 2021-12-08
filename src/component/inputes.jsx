@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 let newnote = JSON.parse(localStorage.getItem("notes")) || [];
 
 function Note() {
@@ -21,9 +22,9 @@ function Note() {
   }
   function btnClick() {
     if (title.length > 0) {
-      let key = newnote.length + 1;
+      let k0 = Math.floor(Math.random() * 100000);
       newnote.push({
-        key: key,
+        key: k0,
         title: title,
         content: content,
       });
@@ -32,6 +33,14 @@ function Note() {
     localStorage.setItem("notes", JSON.stringify(newnote));
     settiyle("");
     setcontent("");
+  }
+  // to ReDO
+  function delbtn(e) {
+    let g = arr.filter((note) => note.key !== parseInt(e.target.id));
+    localStorage.setItem("notes", JSON.stringify(g));
+    setarr(function () {
+      return g;
+    });
   }
   // Elements
   return (
@@ -66,6 +75,9 @@ function Note() {
             <div className="note" key={x.key}>
               <h1>{x.title}</h1>
               <p>{x.content}</p>
+              <button id={x.key} onClick={delbtn}>
+                🗑️
+              </button>
             </div>
           );
         })}
