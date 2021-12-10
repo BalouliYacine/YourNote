@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 let newnote = JSON.parse(localStorage.getItem("notes")) || [];
+//
 function Note() {
   // States
   const [title, settiyle] = useState("");
@@ -35,11 +36,10 @@ function Note() {
   }
   // to ReDO
   function delbtn(e) {
-    let g = arr.filter((note) => note.key !== parseInt(e.target.id));
+    let g = newnote.filter((note) => note.key !== parseInt(e.target.id));
+    newnote = g;
     localStorage.setItem("notes", JSON.stringify(g));
-    setarr(function () {
-      return g;
-    });
+    setarr(g);
   }
   // Elements
   return (
