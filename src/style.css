@@ -7,21 +7,22 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: rgb(218, 216, 216);
+  background: #faedf0;
   padding: 0 16px;
 }
 
 header {
-  background-color: #f5cc13;
+  background-color: #84dfff;
   margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-  color: #fff;
+  color: #516beb;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  font-size: 2.5rem;
 }
 
 footer {
@@ -92,7 +93,7 @@ footer p {
   height: 2.5rem;
   border-radius: 10px;
   padding: 10px;
-  background-color: #f5cc13;
+  background-color: #84dfff;
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
   margin-left: 10px;
@@ -102,8 +103,7 @@ footer p {
   color: #fff;
 }
 .inputs button:hover {
-  background-color: rgb(0, 0, 0);
-  color: #ccc;
+  background-color: #47b5dd;
 }
 .inputs button:nth-child(2):hover {
   background-color: rgb(175, 66, 66);
